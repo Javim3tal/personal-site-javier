@@ -12,6 +12,7 @@
 - `design/tokens.css` — design tokens, fonts, light/dark
 - `design/theme.css` — visual skin on contract classes
 - `design/styleguide.html` — standalone token/component preview
+- `design/og-image.html` — source of `assets/img/og-image.png` (1200×630 link preview); regenerate command inside
 - `docs/SPEC.md` — goals, architecture, contracts
 - `docs/PLAN.md` — task list and status
 - `docs/REVIEW.md` — whole-project review report

@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- Source of assets/img/og-image.png (1200×630 link preview). Regenerate:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --hide-scrollbars \
+       --window-size=1200,630 --virtual-time-budget=5000 \
+       --screenshot=assets/img/og-image.png design/og-image.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG image</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=JetBrains+Mono:wght@500&display=block">
+<style>
+  /* Dark-theme values from design/tokens.css */
+  :root { --bg: #0B111C; --text: #E7EBF0; --muted: #9AA5B4; --accent: #3CCFBF; --line: #1F5753; --border: #243042; }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--bg); }
+  body {
+    position: relative; color: var(--text); font-family: "Manrope", system-ui, sans-serif;
+    background:
+      radial-gradient(600px 420px at 92% 8%, rgba(60, 207, 191, .16), transparent 70%),
+      radial-gradient(520px 380px at 0% 100%, rgba(80, 120, 200, .10), transparent 70%),
+      linear-gradient(rgba(231, 235, 240, .035) 1px, transparent 1px) 0 0 / 48px 48px,
+      linear-gradient(90deg, rgba(231, 235, 240, .035) 1px, transparent 1px) 0 0 / 48px 48px,
+      var(--bg);
+  }
+  svg.flow { position: absolute; inset: 0; }
+  .wrap { position: absolute; left: 88px; right: 88px; top: 92px; bottom: 72px; display: flex; flex-direction: column; }
+  .eyebrow { font: 500 20px/1 "JetBrains Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 18px; }
+  .eyebrow::before { content: ""; width: 44px; height: 2px; background: var(--accent); }
+  h1 { margin-top: 34px; font-size: 84px; font-weight: 700; letter-spacing: -.025em; line-height: 1.02; }
+  .tagline { margin-top: 22px; font-size: 38px; font-weight: 500; line-height: 1.2; color: var(--text); white-space: nowrap; }
+  .foot { margin-top: auto; display: flex; flex-direction: column; gap: 16px; padding-top: 28px; border-top: 1px solid var(--border); }
+  .facts { white-space: nowrap; font-size: 22px; font-weight: 500; color: var(--muted); }
+  .facts b { color: var(--text); font-weight: 700; }
+  .facts span { color: var(--accent); margin: 0 10px; }
+  .url { white-space: nowrap; font: 500 17px/1 "JetBrains Mono", monospace; color: var(--muted); }
+  .mark { position: absolute; top: 72px; right: 88px; width: 72px; height: 72px; border-radius: 18px; background: var(--accent); color: var(--bg); display: grid; place-items: center; font-weight: 700; font-size: 30px; letter-spacing: -.02em; }
+</style>
+</head>
+<body>
+  <svg class="flow" width="1200" height="630" viewBox="0 0 1200 630" aria-hidden="true">
+    <g fill="none" stroke="#3CCFBF" stroke-linecap="round">
+      <path d="M620 40 C 820 60, 900 200, 1210 170" stroke-opacity=".35" stroke-width="1.5"/>
+      <path d="M560 10 C 800 90, 940 250, 1210 250" stroke-opacity=".22" stroke-width="1.2"/>
+      <path d="M700 0 C 860 120, 980 320, 1210 340" stroke-opacity=".16" stroke-width="1"/>
+      <path d="M760 120 C 900 170, 1010 230, 1210 420" stroke-opacity=".12" stroke-width="1"/>
+    </g>
+    <g fill="#3CCFBF">
+      <circle cx="930" cy="140" r="4" fill-opacity=".9"/>
+      <circle cx="1050" cy="246" r="3" fill-opacity=".6"/>
+      <circle cx="1110" cy="330" r="2.5" fill-opacity=".45"/>
+    </g>
+  </svg>
+  <div class="mark">JO</div>
+  <div class="wrap">
+    <div class="eyebrow">Senior Software Engineering Manager · Data &amp; AI</div>
+    <h1>Javier Ortiz Borrego</h1>
+    <p class="tagline">Engineering leadership for data-intensive products</p>
+    <div class="foot">
+      <p class="facts"><b>26+</b> years in software &amp; data<span>/</span>International teams of <b>10+</b><span>/</span>Málaga, Spain</p>
+      <p class="url">javim3tal.github.io/personal-site-javier</p>
+    </div>
+  </div>
+</body>
+</html>

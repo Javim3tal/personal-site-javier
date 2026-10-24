@@ -5,7 +5,7 @@ window.SITE_CONTENT = {
     title: "Javier Ortiz Borrego · Engineering Manager, Data & AI",
     description: "Senior Software Engineering Manager with 26 years in software and data engineering. Multi-product delivery, Azure data integration and agentic AI. Málaga.",
     lang: "en",
-    ogImage: ""
+    ogImage: "https://javim3tal.github.io/personal-site-javier/assets/img/og-image.png"
   },
 
   person: {
