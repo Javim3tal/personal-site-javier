@@ -1,0 +1,500 @@
+/*
+ * base.css — reset, layout, grid and responsive structure.
+ * Structural only: display, positioning, sizing, gaps BETWEEN components,
+ * section padding and breakpoints. Every value comes from the Contract 2
+ * tokens in design/tokens.css. Colour, typography, borders, shadows and the
+ * spacing INSIDE components (cards, timeline, certs, stats…) live in
+ * design/theme.css (loaded after this file) — see design/DESIGN.md §7.
+ * Breakpoints: 640px (2 columns), 896px (desktop header, about split),
+ * 1024px (3 columns). Keep 896px in sync with MOBILE_QUERY in main.js.
+ */
+
+/* ------------------------------------------------------------------ */
+/* Reset                                                               */
+/* ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, dl, dt, dd,
+figure, blockquote {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+main:focus {
+  outline: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* Default inline-icon size; theme.css sizes icons inside components. */
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section,
+.hero {
+  scroll-margin-top: var(--header-h);
+}
+
+.section {
+  padding-block: var(--space-9);
+}
+
+.section__head {
+  max-width: 48rem;
+  margin-bottom: var(--space-7);
+}
+
+.section__lead {
+  max-width: var(--measure);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: var(--space-6);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Components: outer box behaviour only (look + inner spacing: theme.css). */
+.btn {
+  max-width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header                                                              */
+/* ------------------------------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header > .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--header-h);
+}
+
+.brand {
+  margin-right: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.theme-toggle,
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 895.98px) {
+  /* Without JS the nav stays inline (wrapping); with JS it becomes a menu panel. */
+  .js .site-header .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-2) var(--container-pad) var(--space-4);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+  }
+
+  .js .site-header.is-open .nav {
+    display: flex;
+  }
+
+  .js .site-header .nav__link {
+    padding-block: var(--space-3);
+    font-size: var(--fs-base);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .js .site-header .nav__link:last-child {
+    border-bottom: 0;
+  }
+
+  .site-header > .container {
+    flex-wrap: wrap;
+  }
+
+  html:not(.js) .site-header > .container {
+    padding-block: var(--space-3) var(--space-1);
+  }
+
+  .js .site-header > .container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 896px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+    margin-right: var(--space-2);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero (DESIGN.md §8 rhythm: eyebrow → h1 → tagline → lead → actions  */
+/* → meta → stats; the margins inside the heading block are theme's)   */
+/* ------------------------------------------------------------------ */
+.hero {
+  padding-block: var(--space-10) var(--space-9);
+}
+
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__title {
+  max-width: 100%;
+}
+
+.hero__tagline {
+  max-width: 30ch;
+}
+
+.hero__lead {
+  max-width: 40rem;     /* stays left of the motif hub (DESIGN.md §8) */
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.hero__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: var(--space-6) var(--space-5);
+  width: 100%;
+  margin-top: var(--space-9);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.noscript-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ------------------------------------------------------------------ */
+/* About: heading block left (5/12), paragraphs right (7/12) on wide   */
+/* ------------------------------------------------------------------ */
+.about__body {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--measure);
+}
+
+@media (min-width: 896px) {
+  #about > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  #about .section__head {
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Experience timeline (rail, nodes and indent are theme.css's)        */
+/* ------------------------------------------------------------------ */
+.timeline {
+  position: relative;
+  max-width: 48rem;
+}
+
+.timeline__item {
+  min-width: 0;
+}
+
+.timeline__company {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+}
+
+.earlier__heading {
+  margin-top: var(--space-9);
+  margin-bottom: var(--space-5);
+}
+
+.earlier {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .earlier {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.earlier__item {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Projects                                                            */
+/* ------------------------------------------------------------------ */
+.project-card {
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Certifications                                                      */
+/* ------------------------------------------------------------------ */
+.certs {
+  align-items: start;     /* groups have very different lengths */
+}
+
+/* Two columns: flow the groups (balanced columns) instead of grid rows, so a
+   long group doesn't leave a hole next to a short one. */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .certs {
+    display: block;
+    columns: 2;
+    column-gap: var(--space-5);
+  }
+
+  .certs > .cert-group {
+    break-inside: avoid;
+    margin-bottom: var(--space-5);
+  }
+}
+
+.cert-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cert-list {
+  display: grid;
+}
+
+.cert {
+  flex-wrap: wrap;
+}
+
+.cert__name {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Contact                                                             */
+/* ------------------------------------------------------------------ */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  max-width: 52rem;
+}
+
+.contact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 480px) {
+  .contact-card__actions {
+    flex-direction: column;
+    align-self: stretch;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Footer                                                              */
+/* ------------------------------------------------------------------ */
+.site-footer {
+  padding-block: var(--space-6);
+}
+
+.site-footer > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}

@@ -1,0 +1,68 @@
+Javier Ortiz Borrego
+Senior Software Engineering Manager · Data & AI engineering leadership
+PROFILE
+Engineering manager with 26 years in software and data engineering, specialising in data integration and enterprise data
+flow. At JLL Technologies I led a multi-product team across three concurrent product lines, owning delivery from roadmap
+and stakeholder alignment to quality assurance and release. I apply AI-augmented engineering in my daily work (Claude
+Code, Claude Agent SDK, agentic workflows) to speed up teams and automate repetitive tasks. Open to new challenges
+wherever my experience in engineering, data and AI can add value.
+CORE COMPETENCIES
+• Leading product-centric teams: multi-product delivery, people management, mentoring, change and conflict
+management, Agile and Scrum.
+• Data engineering and integration: Azure Data Factory, Azure Functions, Azure SQL, Data Lake, Service Bus, Logic
+Apps, Databricks, PostgreSQL; data mappings and API specifications.
+• AI and agentic engineering: Claude Code, Claude Agent SDK, Model Context Protocol, agentic workflows.
+• Engineering practices and quality: release management (change control, peer review), technical debt management,
+QA, alignment with architecture and security standards (Wiz, Snyk), observability with Datadog.
+• Stack and tooling: Python, Node.js, TypeScript, React, Git, Azure DevOps, JIRA.
+PROFESSIONAL EXPERIENCE
+JLL Technologies · Málaga
+Senior Software Engineering Manager | Jan 2023 – Aug 2026
+• Lead a multi-product engineering team across three concurrent product lines, owning the full delivery cycle: team
+coordination, stakeholder communication, quality assurance and final decision-making.
+• Drive delivery on Node.js, TypeScript, React, Azure, Databricks, Azure Functions and PostgreSQL, with observability in
+Datadog and security hardened through Wiz and Snyk.
+• Bring AI into the development lifecycle: Claude Code, Claude AI and agentic workflows to accelerate team output and
+automate repetitive work.
+• Define processes that stick and resolve issues before they escalate, keeping delivery consistent under complexity.
+Product Engineering Manager | Jan 2022 – Jan 2023
+• Owned team management, delivery, quality and scaling of products; built and mentored the engineering team and
+removed impediments.
+• Managed roadmap and priorities, release management (change control, peer review) and technical debt.
+• Gave technical direction on system and application design, aligned with global architecture patterns and security
+standards in partnership with Solutions Architecture.
+• Led spikes and proofs of concept, and handled support and escalations across data integrations.
+Ciklum · Málaga
+Project Development Manager | Apr 2021 – Jan 2022
+• Managed team, delivery, quality and scale of products, with the same roadmap, release and technical-debt
+responsibilities, plus mentoring and technical direction.
+• Partnered with Solutions Architecture on system and application design; led spikes and POCs and owned support and
+escalations.
+Enterprise Data Architect | May 2020 – Apr 2021
+• Owned data layers, integrations and data flows across the enterprise environment.
+• Worked across Azure SQL, Azure Tables, Azure Data Lake, Azure Storage, Azure Data Factory, Azure Functions,
+Service Bus and Logic Apps.
+• Built solutions in Node.js and U-SQL, defining data mappings and API specifications.
+Senior Developer | Aug 2017 – May 2020
+• Developed on Azure with Azure DevOps, Azure Data Factory and Azure SQL Database, in an Agile environment.
+• Built a conversational chatbot on Azure Cognitive Services and LUIS.AI.
+• Worked with MongoDB, Node.js, PowerShell, Microsoft SQL Server and Team Foundation Server.
+EARLIER EXPERIENCE
+• Accenture – Software Engineering Senior Analyst, Jun 2011 – Aug 2017: team lead across functional design, technical
+design and development; supply chain solutions on JDA; PL/SQL, ETL processes and Oracle E-Business Suite R12.
+• Zoconet S.L – Analyst, Jun 2007 – Jan 2011: led technical design for e-commerce client projects across the full
+lifecycle (Adobe ColdFusion, JavaScript, SQL Server).
+• Novasoft – Analyst, Sep 2004 – Dec 2007: technical, functional and conceptual design on Oracle Forms and Reports;
+contributed to project planning and recruiting.
+• Accenture – Software Engineering Analyst, Jun 2000 – Sep 2004: Oracle E-Business Suite 11i and Oracle Business
+Intelligence; PL/SQL, technical and functional design, quality assurance.
+CERTIFICATIONS
+AI (Anthropic): Claude Academy: Claude Platform 101 (Oct 2026) · Claude Academy: Claude 101 (Oct 2026) · Claude
+Academy: Claude Code 101 (Oct 2026) · Model Context Protocol: Advanced Topics (May 2026) · Introduction to Model
+Context Protocol (May 2026) · AI Fluency: Framework & Foundations (May 2026) · Claude Code in Action (May 2026) ·
+Introduction to Claude Cowork (Apr 2026) · Claude Code 101 (Apr 2026) · Claude 101 (Mar 2026)
+Programming (Coddy): Go Object Oriented Programming (Oct 2026) · Go Logic & Flow (Sep 2026) · Go Fundamentals
+(Sep 2026)
+Leadership (LinkedIn Learning): Communicating with Civility and Respect at Work (Apr 2026) · Head and Heart: The Art
+of Modern Leadership (Jan 2026) · Overcoming Complexity (Nov 2025) · Delegation Strategies for People Leaders (Nov
+2025) · Scrum Avanzado (Jan 2022)

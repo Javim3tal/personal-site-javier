@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Styleguide · Javier Ortiz Borrego</title>
+<meta name="description" content="Design tokens and Contract 3 components for javier-ortiz-website, in light and dark.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* ---- Styleguide-only layout (stands in for assets/css/base.css) ---- */
+  *, *::before, *::after { box-sizing: border-box; }
+  body, h1, h2, h3, h4, p, ul, ol, figure, table { margin: 0; }
+  img, svg { max-inline-size: 100%; }
+  .i { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+  .container { max-inline-size: var(--container-max); margin-inline: auto; padding-inline: var(--container-pad); }
+  .site-header { position: sticky; inset-block-start: 0; z-index: 20; }
+  .site-header > .container { display: flex; align-items: center; gap: var(--space-4); min-block-size: var(--header-h); }
+  .nav { display: flex; gap: var(--space-5); margin-inline-start: auto; }
+  .theme-toggle, .nav-toggle { display: inline-flex; }
+  .nav-toggle { display: none; }
+  @media (max-width: 47.99rem) {
+    .nav { display: none; position: absolute; inset-inline: 0; inset-block-start: 100%; flex-direction: column; gap: 0;
+           padding: var(--space-2) var(--container-pad) var(--space-5); background-color: var(--color-bg);
+           border-bottom: 1px solid var(--color-border); box-shadow: var(--shadow-lg); }
+    .site-header.is-open .nav { display: flex; }
+    .nav__link { padding-block: var(--space-3); font-size: var(--fs-base); }
+    .theme-toggle { margin-inline-start: auto; }
+    .nav-toggle { display: inline-flex; }
+  }
+
+  .hero { padding-block: var(--space-10) var(--space-9); }
+  .hero__title { max-inline-size: 18ch; }
+  .hero__lead, .section__lead { max-inline-size: var(--measure); }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-block-start: var(--space-7); }
+  .hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-5); margin-block-start: var(--space-6); }
+  .hero__meta > span { display: inline-flex; align-items: center; gap: var(--space-2); }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6) var(--space-5); margin-block-start: var(--space-9); }
+  @media (min-width: 48rem) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  .section { padding-block: var(--space-9); }
+  .sg-body { margin-block-start: var(--space-7); }
+  .sg-stack > * + * { margin-block-start: var(--space-7); }
+  .sg-h3 { font-size: var(--fs-lg); margin-block-end: var(--space-4); }
+  .sg-note { color: var(--color-text-muted); font-size: var(--fs-sm); max-inline-size: var(--measure); }
+  .sg-grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  .sg-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); }
+
+  .sg-modes { display: inline-flex; gap: var(--space-1); padding: var(--space-1); border: 1px solid var(--color-border); border-radius: var(--radius-pill); background: var(--color-surface); }
+  .sg-modes button { font: inherit; font-size: var(--fs-sm); font-weight: var(--fw-semibold); padding: 0.4rem 0.9rem; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--color-text-muted); cursor: pointer; }
+  .sg-modes button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-accent-contrast); }
+
+  .sg-swatches { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); }
+  .sg-swatch { border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; background: var(--color-surface); }
+  .sg-swatch__chip { block-size: 4.5rem; border-bottom: 1px solid var(--color-border); }
+  .sg-swatch__meta { padding: var(--space-3); font-family: var(--font-mono); font-size: var(--fs-xs); line-height: 1.5; overflow-wrap: anywhere; }
+  .sg-swatch__meta b { display: block; color: var(--color-text); font-weight: var(--fw-medium); }
+  .sg-swatch__meta span { color: var(--color-text-muted); }
+
+  .sg-table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .sg-table { inline-size: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+  .sg-table th, .sg-table td { padding: var(--space-2) var(--space-3); text-align: start; border-bottom: 1px solid var(--color-border); vertical-align: middle; }
+  .sg-table th { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: var(--fw-medium); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: var(--tracking-caps); }
+  .sg-table tr:last-child td { border-bottom: 0; }
+  .sg-table td:nth-child(n+2) { font-family: var(--font-mono); font-size: var(--fs-xs); white-space: nowrap; }
+  .sg-pair { display: inline-flex; align-items: center; gap: var(--space-2); }
+  .sg-pair i { flex: none; display: inline-grid; place-items: center; inline-size: 1.75rem; block-size: 1.75rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-style: normal; font-weight: var(--fw-bold); font-size: 0.8rem; }
+  .sg-pass { color: var(--color-success); font-weight: var(--fw-medium); }
+  .sg-fail { color: #C2410C; font-weight: var(--fw-medium); }
+
+  .sg-type { display: grid; gap: var(--space-5); }
+  .sg-type__row { display: grid; gap: var(--space-1) var(--space-5); grid-template-columns: minmax(0, 1fr); padding-block-end: var(--space-5); border-bottom: 1px solid var(--color-border); }
+  @media (min-width: 48rem) { .sg-type__row { grid-template-columns: 11rem minmax(0, 1fr); align-items: baseline; } }
+  .sg-type__meta { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-text-muted); }
+  .sg-type__sample { line-height: var(--lh-tight); font-family: var(--font-display); font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); overflow-wrap: anywhere; }
+  .sg-fonts { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  .sg-font { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .sg-font p:first-child { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-text-muted); margin-block-end: var(--space-3); }
+
+  .sg-space { display: grid; gap: var(--space-2); }
+  .sg-space__row { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); align-items: center; gap: var(--space-4); font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-text-muted); }
+  .sg-space__bar { block-size: 0.625rem; border-radius: 2px; background: var(--color-accent); max-inline-size: 100%; }
+  .sg-boxes { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr)); }
+  .sg-box { display: grid; place-items: center; block-size: 6rem; background: var(--color-surface); border: 1px solid var(--color-border); font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-text-muted); text-align: center; }
+  .sg-hero-swatch { block-size: 14rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-bg); background-image: var(--hero-flow), var(--gradient-hero); background-repeat: no-repeat; background-position: 72% 40%; }
+
+  .timeline { max-inline-size: 46rem; }
+  .earlier { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+  .earlier__item p + p { margin-block-start: var(--space-1); }
+  .grid.projects { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+  .cert-groups { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); align-items: start; }
+  .cert-list { margin-block-start: var(--space-2); }
+  .cert-group__issuer { display: block; margin-block-start: var(--space-1); font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: var(--fw-medium); color: var(--color-text-muted); letter-spacing: 0.02em; }
+  .contact-card { max-inline-size: 52rem; }
+  .contact-card h3 { font-size: var(--fs-2xl); }
+  .contact-card p { margin-block-start: var(--space-3); color: var(--color-text-muted); max-inline-size: var(--measure); }
+  .contact-card .sg-row { margin-block-start: var(--space-6); }
+  .site-footer > .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3); padding-block: var(--space-6); }
+</style>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position: absolute; inline-size: 0; block-size: 0; overflow: hidden">
+  <symbol id="i-team" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9.5 9.5h5v5h-5z"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M19 9h3M19 15h3M2 9h3M2 15h3"/></symbol>
+  <symbol id="i-quality" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">Javier Ortiz</a>
+    <nav class="nav" id="sg-nav" aria-label="Styleguide sections">
+      <a class="nav__link is-active" href="#colors">Colour</a>
+      <a class="nav__link" href="#type">Type</a>
+      <a class="nav__link" href="#components">Components</a>
+      <a class="nav__link" href="#expertise">Cards</a>
+      <a class="nav__link" href="#experience">Timeline</a>
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#certifications">Certs</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-moon"/></svg>
+    </button>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sg-nav">
+      <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero (sample copy) -->
+  <section class="hero" aria-labelledby="sg-hero-title">
+    <div class="container">
+      <p class="hero__eyebrow">Senior Software Engineering Manager · Data &amp; AI</p>
+      <h1 class="hero__title" id="sg-hero-title">Javier Ortiz Borrego</h1>
+      <p class="hero__tagline">Engineering leadership for data-intensive products</p>
+      <p class="hero__lead">26 years in software and data engineering. I lead multi-product teams end to end, from roadmap and stakeholders to quality and release, and use AI-augmented engineering to make them faster.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-download"/></svg>Download CV</a>
+        <a class="btn btn--ghost" href="#contact"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-mail"/></svg>Contact me</a>
+      </div>
+      <p class="hero__meta">
+        <span>Málaga, Spain</span>
+        <span><span class="status-dot" aria-hidden="true"></span>Open to new opportunities</span>
+      </p>
+      <div class="stats">
+        <div class="stat"><span class="stat__value">26+</span><span class="stat__label">years in software &amp; data</span></div>
+        <div class="stat"><span class="stat__value">3</span><span class="stat__label">concurrent product lines led</span></div>
+        <div class="stat"><span class="stat__value">10</span><span class="stat__label">Anthropic AI certifications</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Colour -->
+  <section class="section" id="colors" aria-labelledby="sg-colors-title">
+    <div class="container">
+      <p class="section__eyebrow">Colour</p>
+      <h2 class="section__title" id="sg-colors-title">Paper, ink and one signal</h2>
+      <p class="section__lead">Warm neutrals with a single petrol-teal accent. Values below are read live from the active theme.</p>
+      <div class="sg-body sg-stack">
+        <div class="sg-row">
+          <div class="sg-modes" role="group" aria-label="Theme">
+            <button type="button" data-mode="system">System</button>
+            <button type="button" data-mode="light">Light</button>
+            <button type="button" data-mode="dark">Dark</button>
+          </div>
+          <p class="sg-note" id="sg-theme-state" aria-live="polite"></p>
+        </div>
+        <div class="sg-swatches" id="sg-swatches"></div>
+        <div>
+          <h3 class="sg-h3">Contrast (WCAG 2.x, computed live)</h3>
+          <div class="sg-table-wrap">
+            <table class="sg-table">
+              <thead><tr><th scope="col">Pair (fg / bg)</th><th scope="col">Ratio</th><th scope="col">Need</th><th scope="col">Result</th></tr></thead>
+              <tbody id="sg-contrast"></tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h3 class="sg-h3">Effects</h3>
+          <div class="sg-hero-swatch" role="img" aria-label="Hero background: flow motif, glows and grid"></div>
+          <div class="sg-boxes" style="margin-block-start: var(--space-5)">
+            <div class="sg-box" style="border-radius: var(--radius-md); box-shadow: var(--shadow-sm)">--shadow-sm</div>
+            <div class="sg-box" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md)">--shadow-md</div>
+            <div class="sg-box" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg)">--shadow-lg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Type -->
+  <section class="section" id="type" aria-labelledby="sg-type-title">
+    <div class="container">
+      <p class="section__eyebrow">Typography</p>
+      <h2 class="section__title" id="sg-type-title">Manrope for voice, JetBrains Mono for data</h2>
+      <p class="section__lead">One humanist-geometric sans for everything readable; mono only for eyebrows, dates, tags and meta.</p>
+      <div class="sg-body sg-stack">
+        <div class="sg-fonts">
+          <div class="sg-font"><p>--font-display / --font-sans · 400–700</p><p style="font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); line-height: var(--lh-tight)">Enterprise data flow, delivered.</p></div>
+          <div class="sg-font"><p>--font-mono · 400, 500</p><p style="font-family: var(--font-mono); font-size: var(--fs-sm)">JAN 2023 — AUG 2026 · Azure Data Factory · 0123456789</p></div>
+        </div>
+        <div class="sg-type" id="sg-type-scale">
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="display">--fs-display</span><span class="sg-type__sample" style="font-size: var(--fs-display); letter-spacing: var(--tracking-display)">Calm signal</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="3xl">--fs-3xl</span><span class="sg-type__sample" style="font-size: var(--fs-3xl)">Section title</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="2xl">--fs-2xl</span><span class="sg-type__sample" style="font-size: var(--fs-2xl)">Contact heading</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="xl">--fs-xl</span><span class="sg-type__sample" style="font-size: var(--fs-xl)">Card and company titles</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="lg">--fs-lg</span><span style="font-size: var(--fs-lg); color: var(--color-text-muted)">Leads and role titles — calm, readable, never shouty.</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="base">--fs-base</span><span style="font-size: var(--fs-base)">Body copy at line-height <code>--lh-body</code>. Led a multi-product team across three concurrent product lines, owning delivery from roadmap to release.</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="sm">--fs-sm</span><span style="font-size: var(--fs-sm)">Buttons, nav, list items, certificate names.</span></div>
+          <div class="sg-type__row"><span class="sg-type__meta" data-fs="xs">--fs-xs</span><span style="font-size: var(--fs-xs); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--color-accent)">Eyebrows · dates · tags</span></div>
+        </div>
+        <div>
+          <h3 class="sg-h3">Space &amp; radius</h3>
+          <div class="sg-space" id="sg-space"></div>
+          <div class="sg-boxes" style="margin-block-start: var(--space-6)">
+            <div class="sg-box" style="border-radius: var(--radius-sm)">--radius-sm</div>
+            <div class="sg-box" style="border-radius: var(--radius-md)">--radius-md</div>
+            <div class="sg-box" style="border-radius: var(--radius-lg)">--radius-lg</div>
+            <div class="sg-box" style="border-radius: var(--radius-pill)">--radius-pill</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Components -->
+  <section class="section" id="components" aria-labelledby="sg-comp-title">
+    <div class="container">
+      <p class="section__eyebrow">Components</p>
+      <h2 class="section__title" id="sg-comp-title">Buttons, links and tags</h2>
+      <p class="section__lead">Pill buttons, one primary per view. Tags are mono and quiet. Tab through to see the focus ring.</p>
+      <div class="sg-body sg-stack">
+        <div class="sg-row">
+          <a class="btn btn--primary" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-download"/></svg>Download CV</a>
+          <a class="btn btn--ghost" href="#contact"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-mail"/></svg>Contact me</a>
+          <a class="btn" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-linkedin"/></svg>LinkedIn</a>
+          <button class="btn btn--primary" type="button">Button element</button>
+        </div>
+        <div class="sg-row">
+          <a class="link" href="#top">Live demo <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-external"/></svg></a>
+          <a class="link" href="#top">Repository <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-github"/></svg></a>
+          <p>Inline <a href="#top">text link</a> inside a paragraph.</p>
+        </div>
+        <ul class="tags" aria-label="Sample tags">
+          <li class="tag">Azure Data Factory</li><li class="tag">Databricks</li><li class="tag">PostgreSQL</li><li class="tag">Claude Agent SDK</li><li class="tag">MCP</li><li class="tag">TypeScript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Cards (band) -->
+  <section class="section" id="expertise" aria-labelledby="sg-cards-title">
+    <div class="container">
+      <p class="section__eyebrow">Expertise</p>
+      <h2 class="section__title" id="sg-cards-title">Cards on an alternate band</h2>
+      <p class="section__lead">#expertise and #projects sit on --color-bg-alt with hairlines; cards lift on --color-surface.</p>
+      <div class="sg-body sg-grid">
+        <article class="card">
+          <div class="card__icon"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-team"/></svg></div>
+          <h3 class="card__title">Product-centric teams</h3>
+          <p class="card__text">Multi-product delivery, people management and mentoring.</p>
+          <ul class="card__list"><li>Three concurrent product lines</li><li>Agile and Scrum at scale</li><li>Change and conflict management</li></ul>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-data"/></svg></div>
+          <h3 class="card__title">Data engineering &amp; integration</h3>
+          <p class="card__text">Enterprise data flow on Azure, from mappings to API specs.</p>
+          <ul class="tags"><li class="tag">Data Factory</li><li class="tag">Functions</li><li class="tag">Service Bus</li><li class="tag">Databricks</li></ul>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-ai"/></svg></div>
+          <h3 class="card__title">AI &amp; agentic engineering</h3>
+          <p class="card__text">Claude Code, Agent SDK and MCP to speed teams up.</p>
+          <ul class="card__list"><li>Agentic workflows</li><li>Automating repetitive work</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Timeline -->
+  <section class="section" id="experience" aria-labelledby="sg-tl-title">
+    <div class="container">
+      <p class="section__eyebrow">Experience</p>
+      <h2 class="section__title" id="sg-tl-title">Timeline</h2>
+      <p class="section__lead">Filled node marks the most recent company; roles within a company are split by a dashed hairline.</p>
+      <div class="sg-body sg-stack">
+        <ol class="timeline">
+          <li class="timeline__item">
+            <h3 class="timeline__company">JLL Technologies · Málaga</h3>
+            <div class="timeline__role">
+              <h4 class="timeline__title">Senior Software Engineering Manager</h4>
+              <p class="timeline__dates">Jan 2023 – Aug 2026</p>
+              <ul class="timeline__highlights">
+                <li>Led a multi-product engineering team across three concurrent product lines, owning the full delivery cycle.</li>
+                <li>Brought AI into the development lifecycle with Claude Code and agentic workflows.</li>
+              </ul>
+            </div>
+            <div class="timeline__role">
+              <h4 class="timeline__title">Product Engineering Manager</h4>
+              <p class="timeline__dates">Jan 2022 – Jan 2023</p>
+              <ul class="timeline__highlights">
+                <li>Owned roadmap, release management and technical debt; built and mentored the team.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <h3 class="timeline__company">Ciklum · Málaga</h3>
+            <div class="timeline__role">
+              <h4 class="timeline__title">Enterprise Data Architect</h4>
+              <p class="timeline__dates">May 2020 – Apr 2021</p>
+              <ul class="timeline__highlights">
+                <li>Owned data layers, integrations and data flows across the enterprise environment.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+        <div>
+          <h3 class="sg-h3">Earlier experience</h3>
+          <div class="earlier">
+            <div class="earlier__item"><p>Accenture — Software Engineering Senior Analyst</p><p>Jun 2011 – Aug 2017 · Team lead; supply chain on JDA; PL/SQL and ETL.</p></div>
+            <div class="earlier__item"><p>Zoconet S.L — Analyst</p><p>Jun 2007 – Jan 2011 · Technical design for e-commerce projects.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Projects (band) -->
+  <section class="section" id="projects" aria-labelledby="sg-proj-title">
+    <div class="container">
+      <p class="section__eyebrow">Projects</p>
+      <h2 class="section__title" id="sg-proj-title">Project cards</h2>
+      <p class="section__lead">Live card with media, work-in-progress card without media, and the dashed placeholder.</p>
+      <div class="sg-body grid projects">
+        <article class="project-card" data-status="live">
+          <div class="project-card__media"><img alt="" width="640" height="360" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%230F1A2A'/%3E%3Cg fill='%233CCFBF'%3E%3Crect x='80' y='200' width='48' height='100' rx='4'/%3E%3Crect x='160' y='150' width='48' height='150' rx='4'/%3E%3Crect x='240' y='180' width='48' height='120' rx='4'/%3E%3Crect x='320' y='110' width='48' height='190' rx='4'/%3E%3Crect x='400' y='80' width='48' height='220' rx='4'/%3E%3Crect x='480' y='60' width='48' height='240' rx='4'/%3E%3C/g%3E%3C/svg%3E"></div>
+          <h3 class="project-card__title">Pipeline health dashboard</h3>
+          <p class="project-card__text">Sample card: observability for data integrations, end to end.</p>
+          <ul class="tags"><li class="tag">Datadog</li><li class="tag">Azure Functions</li></ul>
+          <div class="project-card__links">
+            <a class="link" href="#top">Demo <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-external"/></svg></a>
+            <a class="link" href="#top">Write-up <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-external"/></svg></a>
+          </div>
+        </article>
+        <article class="project-card" data-status="wip">
+          <p class="project-card__status">In progress</p>
+          <h3 class="project-card__title">Agentic release assistant</h3>
+          <p class="project-card__text">Sample card without media: Claude Agent SDK workflow for change control.</p>
+          <ul class="tags"><li class="tag">Claude Agent SDK</li><li class="tag">MCP</li></ul>
+          <div class="project-card__links"><a class="link" href="#top">Repository <svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-github"/></svg></a></div>
+        </article>
+        <article class="project-card" data-status="placeholder">
+          <p class="project-card__status">Coming soon</p>
+          <h3 class="project-card__title">Data &amp; AI case study</h3>
+          <p class="project-card__text">A write-up on integrating enterprise data flows with AI-assisted engineering.</p>
+          <ul class="tags"><li class="tag">Data</li><li class="tag">AI</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Certifications -->
+  <section class="section" id="certifications" aria-labelledby="sg-cert-title">
+    <div class="container">
+      <p class="section__eyebrow">Certifications</p>
+      <h2 class="section__title" id="sg-cert-title">Certificate lists</h2>
+      <div class="sg-body cert-groups">
+        <div class="cert-group">
+          <h3 class="cert-group__title">AI <span class="cert-group__issuer">Anthropic</span></h3>
+          <ul class="cert-list">
+            <li class="cert"><span class="cert__name">Claude Academy: Claude Platform 101</span><span class="cert__date">Oct 2026</span></li>
+            <li class="cert"><span class="cert__name">Model Context Protocol: Advanced Topics</span><span class="cert__date">May 2026</span></li>
+            <li class="cert"><span class="cert__name">AI Fluency: Framework &amp; Foundations</span><span class="cert__date">May 2026</span></li>
+            <li class="cert"><span class="cert__name">Claude Code in Action</span><span class="cert__date">May 2026</span></li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h3 class="cert-group__title">Leadership <span class="cert-group__issuer">LinkedIn Learning</span></h3>
+          <ul class="cert-list">
+            <li class="cert"><span class="cert__name">Head and Heart: The Art of Modern Leadership</span><span class="cert__date">Jan 2026</span></li>
+            <li class="cert"><span class="cert__name">Delegation Strategies for People Leaders</span><span class="cert__date">Nov 2025</span></li>
+            <li class="cert"><span class="cert__name">Scrum Avanzado</span><span class="cert__date">Jan 2022</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Contact + motion -->
+  <section class="section" id="contact" aria-labelledby="sg-contact-title">
+    <div class="container">
+      <p class="section__eyebrow">Contact &amp; motion</p>
+      <h2 class="section__title" id="sg-contact-title">Contact card and reveal</h2>
+      <div class="sg-body sg-stack">
+        <div class="contact-card">
+          <h3>Let’s talk about your next data &amp; AI challenge</h3>
+          <p>Sample copy. Email, LinkedIn and CV download only — no phone number on the public site.</p>
+          <div class="sg-row">
+            <a class="btn btn--primary" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-mail"/></svg>Email me</a>
+            <a class="btn btn--ghost" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn btn--ghost" href="#top"><svg class="i" aria-hidden="true" width="24" height="24"><use href="#i-download"/></svg>Download CV</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="sg-h3">Reveal on scroll</h3>
+          <p class="sg-note">Fades up once when it enters the viewport; disabled under prefers-reduced-motion. <button class="btn btn--ghost" type="button" id="sg-replay" style="margin-inline-start: var(--space-2)">Replay</button></p>
+          <div class="sg-grid" id="sg-reveal" style="margin-block-start: var(--space-5)">
+            <div class="card reveal" style="--reveal-delay: 0ms"><h3 class="card__title">First</h3><p class="card__text">delay 0 ms</p></div>
+            <div class="card reveal" style="--reveal-delay: 120ms"><h3 class="card__title">Second</h3><p class="card__text">delay 120 ms</p></div>
+            <div class="card reveal" style="--reveal-delay: 240ms"><h3 class="card__title">Third</h3><p class="card__text">delay 240 ms</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Javier Ortiz Borrego</span>
+    <span><a href="#top">Back to top</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".theme-toggle");
+  var navToggle = document.querySelector(".nav-toggle");
+
+  var COLORS = ["bg", "bg-alt", "surface", "surface-2", "text", "text-muted", "border", "border-strong",
+    "accent", "accent-hover", "accent-contrast", "accent-soft", "accent-line", "focus", "success", "selection"];
+  var PAIRS = [
+    ["text", "bg", 4.5], ["text", "surface", 4.5], ["text", "bg-alt", 4.5],
+    ["text-muted", "bg", 4.5], ["text-muted", "bg-alt", 4.5], ["text-muted", "surface", 4.5], ["text-muted", "surface-2", 4.5],
+    ["accent", "bg", 4.5], ["accent", "bg-alt", 4.5], ["accent", "surface", 4.5], ["accent", "accent-soft", 4.5],
+    ["accent-hover", "accent-soft", 4.5], ["accent-contrast", "accent", 4.5], ["accent-contrast", "accent-hover", 4.5],
+    ["border-strong", "bg", 3], ["border-strong", "bg-alt", 3], ["focus", "bg", 3], ["focus", "surface", 3], ["success", "bg", 3]
+  ];
+
+  var probe = document.createElement("span");
+  probe.style.display = "none";
+  document.body.appendChild(probe);
+
+  function rgbOf(token) {
+    probe.style.color = "var(--color-" + token + ")";
+    var m = getComputedStyle(probe).color.match(/[\d.]+/g) || ["0", "0", "0"];
+    return m.slice(0, 3).map(Number);
+  }
+  function hex(rgb) {
+    return "#" + rgb.map(function (v) { return ("0" + Math.round(v).toString(16)).slice(-2); }).join("").toUpperCase();
+  }
+  function lum(rgb) {
+    var c = rgb.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function ratio(a, b) {
+    var la = lum(a), lb = lum(b);
+    return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+  }
+  function effective() {
+    return root.getAttribute("data-theme") || (mq.matches ? "dark" : "light");
+  }
+
+  function renderSwatches() {
+    var html = COLORS.map(function (t) {
+      return '<div class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-' + t + ')"></div>' +
+        '<div class="sg-swatch__meta"><b>--color-' + t + '</b><span>' + hex(rgbOf(t)) + "</span></div></div>";
+    }).join("");
+    document.getElementById("sg-swatches").innerHTML = html;
+  }
+  function renderContrast() {
+    document.getElementById("sg-contrast").innerHTML = PAIRS.map(function (p) {
+      var r = ratio(rgbOf(p[0]), rgbOf(p[1]));
+      var ok = r >= p[2];
+      return '<tr><td><span class="sg-pair"><i style="color: var(--color-' + p[0] + "); background: var(--color-" + p[1] + ')">Aa</i>' +
+        p[0] + " / " + p[1] + "</span></td><td>" + r.toFixed(2) + ":1</td><td>" + p[2] + ":1" + (p[2] === 3 ? " UI" : "") +
+        '</td><td class="' + (ok ? "sg-pass" : "sg-fail") + '">' + (ok ? "Pass" : "Fail") + "</td></tr>";
+    }).join("");
+  }
+  function renderScale() {
+    document.querySelectorAll("[data-fs]").forEach(function (el) {
+      var sample = el.nextElementSibling;
+      el.textContent = "--fs-" + el.getAttribute("data-fs") + " · " + parseFloat(getComputedStyle(sample).fontSize).toFixed(1) + "px";
+    });
+    var space = document.getElementById("sg-space");
+    var rows = "";
+    for (var i = 1; i <= 10; i++) {
+      rows += '<div class="sg-space__row"><span>--space-' + i + '</span><span class="sg-space__bar" style="inline-size: var(--space-' + i + ')"></span></div>';
+    }
+    space.innerHTML = rows;
+  }
+
+  function update() {
+    var mode = root.getAttribute("data-theme") || "system";
+    var eff = effective();
+    document.querySelectorAll(".sg-modes button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-mode") === mode));
+    });
+    document.getElementById("sg-theme-state").textContent =
+      "Showing " + eff + (mode === "system" ? " (following system)" : " (data-theme=\"" + mode + "\")") + ".";
+    toggle.setAttribute("aria-label", eff === "dark" ? "Switch to light theme" : "Switch to dark theme");
+    toggle.querySelector("use").setAttribute("href", eff === "dark" ? "#i-sun" : "#i-moon");
+    renderSwatches();
+    renderContrast();
+  }
+  function setMode(mode) {
+    if (mode === "system") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", mode);
+    update();
+  }
+
+  toggle.addEventListener("click", function () { setMode(effective() === "dark" ? "light" : "dark"); });
+  document.querySelectorAll(".sg-modes button").forEach(function (b) {
+    b.addEventListener("click", function () { setMode(b.getAttribute("data-mode")); });
+  });
+  if (mq.addEventListener) mq.addEventListener("change", update);
+
+  navToggle.addEventListener("click", function () {
+    var open = header.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  document.querySelectorAll(".nav__link").forEach(function (a) {
+    a.addEventListener("click", function () {
+      document.querySelectorAll(".nav__link").forEach(function (x) { x.classList.remove("is-active"); });
+      a.classList.add("is-active");
+      header.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+  document.getElementById("sg-replay").addEventListener("click", function () {
+    reveals.forEach(function (el) { el.classList.remove("is-visible"); });
+    void document.body.offsetHeight;
+    setTimeout(function () { reveals.forEach(function (el) { el.classList.add("is-visible"); }); }, 60);
+  });
+
+  renderScale();
+  update();
+  window.addEventListener("resize", renderScale);
+})();
+</script>
+</body>
+</html>
