@@ -22,7 +22,7 @@ window.SITE_CONTENT = {
   hero: {
     eyebrow: "Senior Software Engineering Manager · Data & AI",
     headline: "Engineering leadership for data-intensive products",
-    lead: "26 years in software and data engineering. Led a multi-product team across three concurrent product lines at JLL Technologies, from roadmap to release, and brings AI-augmented engineering into everyday delivery.",
+    lead: "26 years in software and data engineering. In recent years, led several international teams of more than 10 people, from roadmap to release, and brings AI-augmented engineering into everyday delivery.",
     ctas: [
       { label: "Download CV", href: "assets/CV_Javier_Ortiz_Borrego.pdf", kind: "primary" },
       { label: "Get in touch", href: "#contact", kind: "ghost" }
