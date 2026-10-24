@@ -3,7 +3,7 @@
 window.SITE_CONTENT = {
   meta: {
     title: "Javier Ortiz Borrego · Engineering Manager, Data & AI",
-    description: "Senior Software Engineering Manager with 26 years in software and data engineering. Multi-product delivery, Azure data integration and agentic AI. Málaga.",
+    description: "Senior Software Engineering Manager leading international teams of 10+. Data engineering roots, a passion for AI and 26 years in software. Málaga, Spain.",
     lang: "en",
     ogImage: "https://javim3tal.github.io/personal-site-javier/assets/img/og-image.png"
   },
@@ -21,8 +21,8 @@ window.SITE_CONTENT = {
 
   hero: {
     eyebrow: "Senior Software Engineering Manager · Data & AI",
-    headline: "Engineering leadership for data-intensive products",
-    lead: "26 years in software and data engineering. In recent years, led several international teams of more than 10 people, from roadmap to release, and brings AI-augmented engineering into everyday delivery.",
+    headline: "I lead engineering teams where data meets AI",
+    lead: "Engineering manager with deep roots in data engineering and a genuine passion for AI. I build and grow international teams that deliver with clarity and trust, and I help them work smarter with AI every day.",
     ctas: [
       { label: "Download CV", href: "assets/CV_Javier_Ortiz_Borrego.pdf", kind: "primary" },
       { label: "Get in touch", href: "#contact", kind: "ghost" }
@@ -38,9 +38,7 @@ window.SITE_CONTENT = {
   about: {
     title: "Engineering manager with deep data roots",
     paragraphs: [
-      "Engineering manager specialising in data integration and enterprise data flow. At JLL Technologies, led a multi-product team across three concurrent product lines, owning delivery end to end: roadmap and stakeholder alignment, quality assurance, release and final decision-making.",
-      "Background as developer, analyst and enterprise data architect on Azure, Databricks, PostgreSQL and Oracle, so technical direction is grounded in hands-on experience.",
-      "Applies AI-augmented engineering daily (Claude Code, Claude Agent SDK, agentic workflows) to speed up teams and automate repetitive work. Open to new challenges where engineering, data and AI experience can add value."
+      "Over 26 years in software and data engineering have taught me that great technology is built by great teams. I’ve led several international teams of more than 10 people, guiding them from roadmap to release by combining clear direction, trust, and technical depth. My foundation is data engineering, and my current focus is embedding AI-augmented practices into how teams work every day."
     ]
   },
 
