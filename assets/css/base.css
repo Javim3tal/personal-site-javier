@@ -30,8 +30,8 @@ figure, blockquote {
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+/* :where() keeps this reset at zero specificity so component rules in theme.css can set padding. */
+:where(ul[class], ol[class]) {
   list-style: none;
   padding: 0;
 }
