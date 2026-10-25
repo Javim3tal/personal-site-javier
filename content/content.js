@@ -5,7 +5,7 @@ window.SITE_CONTENT = {
     title: "Javier Ortiz Borrego · Engineering Manager, Data & AI",
     description: "Senior Software Engineering Manager leading international teams of 10+. Data engineering roots, a passion for AI and 26 years in software. Málaga, Spain.",
     lang: "en",
-    ogImage: "https://javim3tal.github.io/personal-site-javier/assets/img/og-image.png"
+    ogImage: "https://javierortizborrego.com/assets/img/og-image.png"
   },
 
   person: {
@@ -71,7 +71,7 @@ window.SITE_CONTENT = {
       icon: "code",
       title: "Stack and tooling",
       summary: "The tools behind day-to-day delivery.",
-      items: ["Python, Node.js, TypeScript", "React", "Git, Azure DevOps", "JIRA"]
+      items: ["Oracle, SQL for Azure, PostgreSQL", "Python, Node.js, Go", "React, NextJS, TypeScript", "DBT, Databricks, Snowflake", "Git, Azure DevOps, JIRA"]
     }
   ],
 

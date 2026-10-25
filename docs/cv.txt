@@ -14,7 +14,8 @@ Apps, Databricks, PostgreSQL; data mappings and API specifications.
 • AI and agentic engineering: Claude Code, Claude Agent SDK, Model Context Protocol, agentic workflows.
 • Engineering practices and quality: release management (change control, peer review), technical debt management,
 QA, alignment with architecture and security standards (Wiz, Snyk), observability with Datadog.
-• Stack and tooling: Python, Node.js, TypeScript, React, Git, Azure DevOps, JIRA.
+• Stack and tooling: Oracle, SQL for Azure, PostgreSQL, Python, Node.js, Go, React, NextJS, TypeScript, DBT, Databricks,
+Snowflake, Git, Azure DevOps, JIRA.
 PROFESSIONAL EXPERIENCE
 JLL Technologies · Málaga
 Senior Software Engineering Manager | Jan 2023 – Aug 2026
