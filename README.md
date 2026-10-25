@@ -56,7 +56,14 @@ The repository is ready to publish as-is. `.nojekyll` is already at the root, so
 1. Create a GitHub repository and push this project to its `main` branch:
    - **User site:** name the repository `<user>.github.io`. It is served at `https://<user>.github.io/`.
    - **Project site:** use any name, for example `website`. It is served at `https://<user>.github.io/website/`, and the relative paths make that work.
-2. In the repository, go to **Settings → Pages → Build and deployment**. Set **Source** to *Deploy from a branch*, then **Branch** to `main` and folder `/ (root)`. Save.
-3. Wait for the Pages build to finish (about a minute), then open the URL shown on that page.
+2. In the repository, go to **Settings → Pages → Build and deployment** and set **Source** to *GitHub Actions*.
+3. Every push to `main` runs `.github/workflows/deploy.yml`: it checks `content/content.js` (shape, plain text, files it points to exist), validates `index.html` and checks links, then deploys only if all three pass. Pull requests run the checks without deploying. Watch it in the **Actions** tab.
+
+Run the same checks locally before pushing:
+
+```
+node .github/scripts/check-content.js
+npx --yes html-validate@11.17.0 index.html
+```
 
 Optional, once the final URL is known: add `<link rel="canonical">` and `og:url` to `index.html`. For a share preview with an image, set `meta.ogImage` in `content.js` (a 1200×630 image in `assets/img/`) and add the matching `og:image` tag to `index.html`, because link-preview crawlers do not run JavaScript.

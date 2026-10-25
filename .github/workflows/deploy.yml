@@ -1,0 +1,64 @@
+# Checks the site on every push and pull request; deploys to GitHub Pages from main only when the checks pass.
+# Requires Settings → Pages → Source: "GitHub Actions".
+name: Check and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Check content data
+        run: node .github/scripts/check-content.js
+
+      - name: Validate HTML
+        run: npx --yes html-validate@11.17.0 index.html
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # LinkedIn blocks bots (HTTP 999); the font origins are bare preconnect hosts, not pages.
+          args: >-
+            --no-progress
+            --exclude 'linkedin\.com'
+            --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
+            index.html content/content.js
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/configure-pages@v6
+
+      # Publishes the repo root as-is, like the previous branch deploy (dotfiles are left out).
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

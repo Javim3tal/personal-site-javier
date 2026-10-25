@@ -3,7 +3,8 @@
 Stack: static HTML + CSS custom properties + vanilla JS. No build, no npm deps.
 
 Run locally: `python3 -m http.server 8080` → http://localhost:8080
-Check content data: `node -e "global.window={};require('./content/content.js');console.log(Object.keys(window.SITE_CONTENT))"`
+Check content data: `node .github/scripts/check-content.js` · HTML: `npx --yes html-validate@11.17.0 index.html`
+Deploy: push to `main` → `.github/workflows/deploy.yml` runs the checks and deploys to Pages only if they pass.
 
 Conventions
 - Three layers, one owner each: content (`content/`), design (`design/`), structure/behaviour (`index.html`, `assets/`). They meet only via the contracts in `docs/SPEC.md`.

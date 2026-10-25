@@ -19,3 +19,6 @@
 - `docs/cv.txt` — CV text extract (no phone)
 - `.claude/launch.json` — localhost preview config
 - `.nojekyll` — disable Jekyll on GitHub Pages
+- `.github/workflows/deploy.yml` — CI: content, HTML and link checks; deploys to GitHub Pages from `main` when they pass
+- `.github/scripts/check-content.js` — validates `content/content.js` against SPEC Contract 1 (used by CI)
+- `.htmlvalidate.json` — html-validate rules for `index.html`
