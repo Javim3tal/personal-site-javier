@@ -1,4 +1,4 @@
-# Checks the site on every push and pull request; deploys to GitHub Pages from main only when the checks pass.
+# Checks the site (content, HTML, links, Playwright e2e) on every push and pull request; deploys to GitHub Pages from main only when they all pass.
 # Requires Settings → Pages → Source: "GitHub Actions".
 name: Check and deploy
 
@@ -37,8 +37,40 @@ jobs:
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
             index.html content/content.js
 
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: tests
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tests/package-lock.json
+
+      - name: Install test dependencies
+        run: npm ci
+
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v5
+        with:
+          name: playwright-report
+          path: tests/playwright-report/
+          retention-days: 14
+
   deploy:
-    needs: check
+    needs: [check, e2e]
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:

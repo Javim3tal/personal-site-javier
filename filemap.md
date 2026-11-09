@@ -22,3 +22,7 @@
 - `.github/workflows/deploy.yml` — CI: content, HTML and link checks; deploys to GitHub Pages from `main` when they pass
 - `.github/scripts/check-content.js` — validates `content/content.js` against SPEC Contract 1 (used by CI)
 - `.htmlvalidate.json` — html-validate rules for `index.html`
+- `tests/package.json` — test-only npm deps (`@playwright/test`, `@axe-core/playwright`); the site has none
+- `tests/playwright.config.js` — browsers (Chromium, Firefox, WebKit, Pixel 7, iPhone 15) and the local static server
+- `tests/e2e/fixtures.js` — loads `content/content.js` for expectations; fails any test on console errors or broken local requests
+- `tests/e2e/*.spec.js` — smoke, content rendering, navigation, theme, mobile menu, links/assets, layout + no-JS + axe accessibility
