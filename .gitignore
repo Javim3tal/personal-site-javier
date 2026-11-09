@@ -3,3 +3,6 @@ node_modules/
 .vscode/
 *.log
 .playwright-mcp/
+tests/test-results/
+tests/playwright-report/
+tests/blob-report/

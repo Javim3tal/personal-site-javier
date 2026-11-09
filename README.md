@@ -57,7 +57,7 @@ The repository is ready to publish as-is. `.nojekyll` is already at the root, so
    - **User site:** name the repository `<user>.github.io`. It is served at `https://<user>.github.io/`.
    - **Project site:** use any name, for example `website`. It is served at `https://<user>.github.io/website/`, and the relative paths make that work.
 2. In the repository, go to **Settings → Pages → Build and deployment** and set **Source** to *GitHub Actions*.
-3. Every push to `main` runs `.github/workflows/deploy.yml`: it checks `content/content.js` (shape, plain text, files it points to exist), validates `index.html` and checks links, then deploys only if all three pass. Pull requests run the checks without deploying. Watch it in the **Actions** tab.
+3. Every push to `main` runs `.github/workflows/deploy.yml`: it checks `content/content.js` (shape, plain text, files it points to exist), validates `index.html`, checks links and runs the Playwright tests, then deploys only if all of them pass. Pull requests run the checks without deploying. Watch it in the **Actions** tab.
 
 Run the same checks locally before pushing:
 
@@ -67,3 +67,18 @@ npx --yes html-validate@11.17.0 index.html
 ```
 
 Optional, once the final URL is known: add `<link rel="canonical">` and `og:url` to `index.html`. For a share preview with an image, set `meta.ogImage` in `content.js` (a 1200×630 image in `assets/img/`) and add the matching `og:image` tag to `index.html`, because link-preview crawlers do not run JavaScript.
+
+## End-to-end tests (Playwright)
+
+`tests/` holds a Playwright suite that opens the real page in Chromium, Firefox, WebKit and two mobile devices. It checks that every section renders what `content/content.js` says, that navigation, the theme toggle, the mobile menu and the CV download work, that local files exist, that there is no horizontal scroll, that the no-JS fallback shows, and that axe finds no WCAG A/AA issues in either theme. Any console error fails the test. Expectations come from `content.js`, so editing copy does not break tests.
+
+```sh
+cd tests
+npm ci
+npx playwright install        # first time only
+npx playwright test           # or: npx playwright test --ui
+npx playwright show-report
+```
+
+Against the live site: `BASE_URL=https://javierortizborrego.com npx playwright test`. CI runs the suite on every push and pull request (`e2e` job) and deploys only if it passes.
+
