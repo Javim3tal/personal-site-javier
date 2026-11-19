@@ -1,93 +1,520 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 2
+/Kids [ 3 0 R 8 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Contents 4 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
-/Contents 9 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/Length 11127
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 762.7008 cm
+q
+.121569 .160784 .215686 rg
+BT 1 0 0 1 0 4 Tm /F2 21 Tf 25 TL (Javier Ortiz Borrego) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 748.7008 cm
+q
+BT 1 0 0 1 0 3.5 Tm 14 TL /F1 10.5 Tf .141176 .333333 .560784 rg (Senior Software Engineering Manager \267 Data & AI engineering leadership) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 746.7008 cm
+Q
+q
+1 0 0 1 62.69291 734.7008 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .419608 .447059 .501961 rg (M\341laga, Spain  ) Tj (|) Tj (  javier_ortiz_borrego@hotmail.com) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 722.7008 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .141176 .333333 .560784 rg (linkedin.com/in/javier-ortiz-borrego-5a994329) Tj .419608 .447059 .501961 rg (  ) Tj (|) Tj (  ) Tj .141176 .333333 .560784 rg (javierortizborrego.com) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 699.7008 cm
+q
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 3 Tm /F2 11 Tf 14 TL (PROFILE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 697.1008 cm
+q
+.6 w
+1 J
+.831373 .843137 .862745 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 632.6008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 51.8 Tm /F1 8.7 Tf 12.1 TL (Engineering manager with 26 years in software and data engineering, specialising in data integration and enterprise data) Tj T* (flow. At JLL Technologies I led a multi-product team across three concurrent product lines, owning delivery from roadmap) Tj T* (and stakeholder alignment to quality assurance and release. I apply AI-augmented engineering in my daily work \(Claude) Tj T* (Code, Claude Agent SDK, agentic workflows\) to speed up teams and automate repetitive tasks. Open to new challenges) Tj T* (wherever my experience in engineering, data and AI can add value.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 609.6008 cm
+q
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 3 Tm /F2 11 Tf 14 TL (CORE COMPETENCIES) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 607.0008 cm
+q
+.6 w
+1 J
+.831373 .843137 .862745 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 578.8008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 578.8008 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12.1 TL /F2 8.7 Tf .133333 .133333 .133333 rg (Leading product-centric teams:) Tj /F1 8.7 Tf ( multi-product delivery, people management, mentoring, change and conflict) Tj T* (management, Agile and Scrum.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 554.6008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 554.6008 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12.1 TL /F2 8.7 Tf .133333 .133333 .133333 rg (Data engineering and integration:) Tj /F1 8.7 Tf ( Azure Data Factory, Azure Functions, Azure SQL, Data Lake, Service Bus, Logic) Tj T* (Apps, Databricks, PostgreSQL, Oracle; data mappings and API specifications.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 542.5008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 542.5008 cm
+q
+BT 1 0 0 1 0 3.4 Tm 12.1 TL /F2 8.7 Tf .133333 .133333 .133333 rg (AI and agentic engineering:) Tj /F1 8.7 Tf ( Claude Code, Claude Agent SDK, Model Context Protocol, agentic workflows.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 518.3008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 518.3008 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12.1 TL /F2 8.7 Tf .133333 .133333 .133333 rg (Engineering practices and quality:) Tj /F1 8.7 Tf ( release management \(change control, peer review\), technical debt management,) Tj T* (QA, alignment with architecture and security standards \(Wiz, Snyk\), observability with Datadog.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 506.2008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 506.2008 cm
+q
+BT 1 0 0 1 0 3.4 Tm 12.1 TL /F2 8.7 Tf .133333 .133333 .133333 rg (Stack and tooling:) Tj /F1 8.7 Tf ( Python, Node.js, TypeScript, React, Git, Azure DevOps, JIRA.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 483.2008 cm
+q
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 3 Tm /F2 11 Tf 14 TL (PROFESSIONAL EXPERIENCE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 480.6008 cm
+q
+.6 w
+1 J
+.831373 .843137 .862745 RG
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 462.6008 cm
+q
+.121569 .160784 .215686 rg
+BT 1 0 0 1 0 3.4 Tm /F2 9.6 Tf 13 TL (JLL Technologies \267 M\341laga) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 447.6008 cm
+q
+BT 1 0 0 1 0 3.3 Tm 12 TL /F2 8.7 Tf .121569 .160784 .215686 rg (Senior Software Engineering Manager  ) Tj (|) Tj (  Jan 2023 \226 Aug 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 422.4008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 422.4008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Lead a multi-product engineering team across three concurrent product lines, owning the full delivery cycle: team) Tj T* (coordination, stakeholder communication, quality assurance and final decision-making.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 398.2008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 398.2008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Drive delivery on Node.js, TypeScript, React, Azure, Databricks, Azure Functions and PostgreSQL, with observability in) Tj T* (Datadog and security hardened through Wiz and Snyk.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 374.0008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 374.0008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Bring AI into the development lifecycle: Claude Code, Claude AI and agentic workflows to accelerate team output and) Tj T* (automate repetitive work.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 361.9008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 361.9008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Define processes that stick and resolve issues before they escalate, keeping delivery consistent under complexity.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 346.9008 cm
+q
+BT 1 0 0 1 0 3.3 Tm 12 TL /F2 8.7 Tf .121569 .160784 .215686 rg (Product Engineering Manager  ) Tj (|) Tj (  Jan 2022 \226 Jan 2023) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 321.7008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 321.7008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Owned team management, delivery, quality and scaling of products; built and mentored the engineering team and) Tj T* (removed impediments.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 309.6008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 309.6008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Managed roadmap and priorities, release management \(change control, peer review\) and technical debt.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 285.4008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 285.4008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Gave technical direction on system and application design, aligned with global architecture patterns and security) Tj T* (standards in partnership with Solutions Architecture.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 273.3008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 273.3008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Led spikes and proofs of concept, and handled support and escalations across data integrations.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 255.3008 cm
+q
+.121569 .160784 .215686 rg
+BT 1 0 0 1 0 3.4 Tm /F2 9.6 Tf 13 TL (Ciklum \267 M\341laga) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 240.3008 cm
+q
+BT 1 0 0 1 0 3.3 Tm 12 TL /F2 8.7 Tf .121569 .160784 .215686 rg (Project Development Manager  ) Tj (|) Tj (  Apr 2021 \226 Jan 2022) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 215.1008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 215.1008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Managed team, delivery, quality and scale of products, with the same roadmap, release and technical-debt) Tj T* (responsibilities, plus mentoring and technical direction.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 190.9008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 190.9008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Partnered with Solutions Architecture on system and application design; led spikes and POCs and owned support and) Tj T* (escalations.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 175.9008 cm
+q
+BT 1 0 0 1 0 3.3 Tm 12 TL /F2 8.7 Tf .121569 .160784 .215686 rg (Enterprise Data Architect  ) Tj (|) Tj (  May 2020 \226 Apr 2021) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 162.8008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 162.8008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Owned data layers, integrations and data flows across the enterprise environment.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 138.6008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 138.6008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.7 Tf 12.1 TL (Worked across Azure SQL, Azure Tables, Azure Data Lake, Azure Storage, Azure Data Factory, Azure Functions,) Tj T* (Service Bus and Logic Apps.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 126.5008 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 126.5008 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Built solutions in Node.js and U-SQL, defining data mappings and API specifications.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 111.5008 cm
+q
+BT 1 0 0 1 0 3.3 Tm 12 TL /F2 8.7 Tf .121569 .160784 .215686 rg (Senior Developer  ) Tj (|) Tj (  Aug 2017 \226 May 2020) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 98.40079 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 98.40079 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Developed on Azure with Azure DevOps, Azure Data Factory and Azure SQL Database, in an Agile environment.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 86.30079 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 86.30079 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Built a conversational chatbot on Azure Cognitive Services and LUIS.AI.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 74.20079 cm
+BT /F1 7 Tf 8.4 TL ET
+.141176 .333333 .560784 rg
+BT 1 0 0 1 0 5.1 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 72.69291 74.20079 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 3.4 Tm /F1 8.7 Tf 12.1 TL (Worked with MongoDB, Node.js, PowerShell, Microsoft SQL Server and Team Foundation Server.) Tj T* ET
+Q
+Q
+ 
+
+endstream
 endobj
 5 0 obj
 <<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/F1 6 0 R
+/F2 7 0 R
 >>
 endobj
 6 0 obj
 <<
-/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/Author (Javier Ortiz Borrego) /CreationDate (D:20261022154450+02'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261022154450+02'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Javier Ortiz Borrego - CV) /Trapped /False
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Count 2 /Kids [ 4 0 R 5 0 R ] /Type /Pages
+/Contents 9 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Parent 2 0 R
+/Resources <<
+/Font 5 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 9 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3121
+/Filter [ /ASCII85Decode /FlateDecode ]
+/Length 1462
 >>
 stream
-Gau`VhfIM](4OS:Tr1!:*TCO<CpSQ#,U&`>-4LFNlonrl8([lBN9->c:ce?3h]p5[6(i?=h_^`-?mM;<oA_piOlE)nr4;`C]L:t2N8@pPaS!o)MHo'/dJ+Id`[?8.\E1fIF+U"8F&<53_KJ"mH186%H>Y\*+ib&G@H8Y'I>e6GB.'p\>D[n7QQX.4SuY8(>p\G$#!Yu%d63ig)`hW%P8S_&`a@*fhb*`XpcYF(+'BNKM!6m)--4X5lQ*C`P:>_Y]5AH.Vk\a'dl%!m)*/e#N&$D_CarMR'/[dB1a@\&Ckh@sL1d1=UDJUI&ke2_L&0DW=@5u<'>h_Yk&jW6.b,%?kkIBrS%%'T<,Ts)HND?0Hp;Fk_%kca4E0uEmN+I(S)P<'Ti$haL61!VoRH!,TeG+%Ikg&9^F$r&s-Y[R`&)UG[X9u!^OFLt.ErVRTp_AJSn@GNKJP4=XH[\T`P%l#nTm&Dk.3Y5G"hCsXZ#/#\gF.o\.'PJYHDdK22&DbNk6#ETG<Er3H:dRgBg/\jJt6/)L.t571UJ91;1U=q*E>`U0[sE;D^GCIc1)u?u;q!bhh[bVRioDR=-OALO*I%j6Ec"0tSuHG"(L4Gl_(^bQS(2MbSlb/4#+"Ah/mG8E;%n32Jqn!lO[:RRo9p=AkILB`pWkS5V`GpD[>.:/eTA:g]rdgKQK]nN:;1Ro(BV2.T700No6kUh;]#8J+T@$!neqF!_$QF&!!u=V_eb*goEc5nH[WZk-GQ8u73:oSN&pRW8[-c>^)-<R.-bjb1P[11r&s,D(p!ZDC`!1A#bk+6=DL+UX79fU.1&aB_(O:_Dl9\q\Em_o5;D,0<T?K/Js1fJ&"F/&iChnan$E77&Ko(G$^]A0.KE9Z\;\rjRTcH:qa29A)iu^/GAiX[,@;CHDg(%5&o1@S&heS4G,<Y=N--&.Z:t8Z$*2A;0#':/fN!Le@AU:,i9t-lpF]*)n8"MkK^&J$hM+,QP%cK0,8"4lNajcAsb*nD'RjI8(Vdgcl4o`VnV30HPVQ\/pTDLj+2@qu<%Fh-Simb4Wq]W:MO>.Uh-b]:n8a?(X<l@CWYKXk<-)fKHTc],S7=)6U&C-N.qs5c;(fN)[TY)0?W]oPk.$*G3'#I4Y.Qh+PmbL:'iQ=ItZg8lS-aOS[-o,XDi*!:![<XIZ4FQ;oWm;u/;=RUMtY(X!_:ed[3\cJHt]QIodhEOc=Xg'SU_*q2Vu>63BX-XPaKC^khIc`W-V<g1Ja_<CK-bDa(;`.R&Ep_/@G5;-Ec/`:MOq4jSF_Mk$N+=uILO9mr-"P3?U0EGQ<#8I[VonV.r&km#@2&18hf(FT;1uYmGZ>s6S=]1lS-3#?_#/I1"\AW4,I0\P-@f8%>^Ot\uHj_S,.aa>6a^UPW-jXt>gM&a??]Z"gfOhG+VC=N\+GZUI@96Ln"*Q;t["UqFI7j\EoT<B](!7t\O[(d*O7-6PG<eD9IT(d(M6p]mb)=UEQGjFm=2I(k;j]%mOs:87N(!1?+;S+3Gp5NG+7pKt>ddre6#7_fp$dWLHD+D;WKsbk*OiVBj1Tll=Ag*[RZYPY6JG-gQ6&eeiEFN0ej>uO/"A6m6K<2`TIA/,b/=C588+]X<,V3mP!%PNfXeVBkgqMahs4HMH@:u2(lb]e5P;hrIgu\of>(:!1_"o[ZRJf4*5rG4Rtc6KGNi#5boZ)Ep=V16pHDC)/T0)mf%=oMGH>D"S;uF*>#BB8l$?Y1IPZ9P/CnT`*RGi'S:31kT7Ru]6^R2T4eCA:laM9]W'/Z(.D#8T[B`rU:UF8F:=-@=dqui7YN(lFVUqj+1M2RJe'nf"[F9@dhnL_JP!$+3ZsH[uW[,O0D6iMEM&.;G:8YYjL*6)!T!Q?nj1.gcqRangcs;,3)Ds#4ZFE&0W3*XBFtHXNG0:QD.ef2sC:D@1Tu)p#qGN+`<m9\38tBDZ;!i!WV\956QhH0ZZ,JW]S9(5_^]o@o1S#'`o[bP82-3?5Pa!V:O9=p6aGT/["s1f>YSjUTI%?\,OEi#"q!C)]JR\\f7NMA]*N/YoI);1Qhu$J[3fk6_d"*Te!cf]F!\Q#)@VEk=3"[\FX&)%qpi]!$$o.jrZpmF`k6'bPd"7@,kKjKR:J`4"",j8!.;3_96K$HMD)\aYq<DEJ/<TZ17F!\XDH$+@W8-W:-`:mNNL&4/ZLNC?0hLJbICQLEXJeaM!]()^APG)=PW/+59a[?S/1V5c1rPLYL!n+2:6t5Q#1@'X&ut*El-qcF3S>@Ki83_RX&IB`@^8")eY^MMn2%j)729.cPF;DXV_+rX:9PK5$DM-jD'k!%@We-Oh*0pgf54O_`>W,uBo5BOV^6Bc'+*ktb9dsOTaU]JAJ:HGe#DJ39#=4.YUS^7*,f%_R__fQ1NQ]1ef1m$0`7V_/Qp+M;7E5DM3e@V/[^^+^BMN4S1_r_#_3=A'ad&;9dYaKWQ,S&M7UV:7@l;QOJFEbL3jei]mjHg#;Dh8g=ak(]=JB]8;lSfHTA:q*BWN]an#-/,"]34'l,j2hYK66"jPjPDdEm<]s,)CHV8%V`&7],)m!$Sk^-<hfJTelpSs)W]HeGhhBMP$gn#t)[47Ze'cGG*JVNbY/]@@1Iik[L=B-`;gKm5UoOUe&`&?Y?T`N:FllLo'++j4lIJ%=5bOGMJ]O@8X=Em_ha24)[#'ZiH8R=I1hX9[`Kke*Cde40SQ.apRd7]nG2&$Q!L2P^O;E&EkNRSET8N#G(GRYCq[0-?])g9^,<@9K=^-F(!'BMn05hC!u\,@h[`b_p)jOPF"c)UdL0K-0g[*78ZStr/Ci34iEb)l[%J=!BAf4@r_=VkW&2u8OCWOoDrQL@5Vi-*;0g.9GZlRk_-:e%KA-Z,%(ca4>ueU?c/\XBKafBXEkV#0Cdif[FaiY2/&fF89DD.'AuSo206<oZVD[\Pg'G[_)FW8_@96!(;HH^3d)@iW/'7<?l_4@6k&Hr]%a^C7>mOlDU6mqjXk95QA"Yj)LEQjFf.5`;;iPnPLRB"hZZbT,6"?rJ8on(/e^IpKru;4u4%hqDDFe4/e)_Rki>4-n.DjgfO&2e4GU7rsij/TaK_$"-]26V^cYrSJCCCoe+VY#k^aX(G;mX*kYUPCESS(%l#~>endstream
+Gaua=h/h:0&A[3!/,#r0DA(PV+#`3%-.!l(!sR$+bmc=`/W<oeEb--2rUmY*%46a5kZt%p1BH1_&++:Z[002$OQ+"s"+9UrrJ1HY^fphR)f>'k0_?:@)Pl*?[>]"Ll4L8fQ=68[K6$b@+DjI3/f:_M%ua98[%0+rY^njW_+Y6L(en*t881C0BF`koA3?C"nB]d,4rulrL0*;]!Uhsaq_N]Hg*[*(m<;usHgVi-dip@_*H9a/#C^kK]A8&6a$rt*LnWYl)330eE5>uQUAhT4oIBf>=D[B1EsTpbB-t&ql!lZ=`3u9XX>Xjd1]-Q-:WM[44iB+3G!Uo20aafe;Rpc;/OO3_^<[FW93.G2kGX'&YdCJa/At.tWFR\V_C/hd7S*jnQ:+&kRo$iBe2?%E$!8N@.n&/Te18-AMU<8#UB+1uMCaB[T(jcJ-jKdrU+j-t4oRL!I*21rDjG<l-38#<0J:cj?+bkB:K+t0Inc[@1;S%6.0G^JrLJ9CZcW*`kK,U$D??dO50G^I'j@JtqA`:Mo-)HL%-Y_UNtd4,`p/.T,0h?sIjXG*ZYtKm0B%hB.9IFN(LWj82=9u)4Y?3tO_%>kWt<,T;h<d",*&)`)>H<\>T1Epk,W<Z?EG+)k;?imXdHlP@$XMG&<@5(Jd3Mg,VUh<l%Ug<)5ZO+@`=Rq)^^nQ(BEdpg.(8g"$8F<2S^BPL1XP;YL-OX<7>TKO7/HCYj9o:Y)`rd<s0k%cVg%[&@%+m1)UB9QZY)sWK8UA4Wm*H-)8Lckqiru`/o#.,e>XB+j#+geV21>:t__nq?<gXbl5I;H<P2u[C=$+J$Eu*&fip>rS%FPEM=<5;94i>h&,IpeZrgknMe[I8F:q>=Y;/G?:(l5+,0:c?1`d.g`)<o"4nJf*u:3qDBBB,DgofP*7M.;Vb)X\c@8ELZ#4`A>"auIrpm)h4C&/]joGS9VZD^"I6a)r"F7gU(YpGN0TN7J&V!k9P<r\^kGT0."f@:0?!^qXFmWh!Wq?AR+\E6Tig-$?QToVgHLK5mKr<Q-IU)[+`'A-mr-EpcC-CTViO+=.2p(/ZB/eF+r(F]JRlQP(%rSW!eJ!J2.;(()M=-s+@NLJQNodh;+7,%6NEHjJGM%Q>,bX7HF"I999lrEJ_gKqaL?Aok[9.XS-'AUeh:]`;mF3'5NjRtq@&#hGP>r\.9HT0s@k./AJ5LW-i&&M'0G.aS_n.s->\nCmfdEEY4>C12\0,adp!UKag"9L_E&T+uf';38Du6;,SDY+*A@@LroP5'c?Wf'X!1ul3F.Vh'3)SeK@I))N[ZOb2+PK4pM_;0q/Cf<I$N;HSa%bZZM#:S<hRF;M8C[qUB/!DeI5"?CNi#nnM(B$QC*1WmYLYSMnI&tlm0Yn?EqWf9E<+eIn%3)"Kgk:D6:n1Z(uZ=7B>bZ$.(6T_MB8-+X2)8!O28dZqO7\`p;M?t&K:ZLfOicN~>
+endstream
 endobj
 10 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1449
+/Author (Javier Ortiz Borrego)
+/CreationDate (D\07220261105163248\05301\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220261105163248\05301\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (\050unspecified\051)
+/Title (Javier Ortiz Borrego \055 CV)
+/Trapped /False
 >>
-stream
-Gau`Rhf%4>&:WfGR&:TX-*Gi:)p"49TLVC:$C:+%ialUQi-+L1enZ].fAEY=fHG41\u6'9^u"ncI5<qf9`1"3Ih2^0o\m]L!3s=H!3ltPr%SWX`_1sN,TY'I\lP/Jla@5R1cqXk`s/dTE?-`:`?,q6a)jC$aCPHjP(T5>pbB@aJ<835G0h4Re+%**Ku%+lKB[(=fH4@Lrrr>X[I;H:3U*.QV"3ui#%d3A7]/[Y/dB\-oagtD/D"dWoMZt`9Z1=#?),m5G4:(#m&YWi1:fRE]<\q-jNaGIQf^tH_pW6XkJVLM-!%R!:Utm6ZI:_cg((@rU-m:=lki/f#2+]LoIZEVoR_T>.[R5UXn10o2.:B*%a;jXD5^u!8=!,iR#I1SbZGJa$!oso2H/4HT-n$7#[3q]j\,R5p-:>N"(sFn)G$!%YfN"n70<-)A6H95Y#-NJ,uHr'55/Z7!]13\B[+%X@gqlCZ91kW(4m9\'$(4%[A=:"!r$oq/Nf"WbW_)kZ$'VJV$L1hZ)k/bOYl!`_9L"__]1@j=WT!r;lnLQ<$Ik8Q%(.127N#Vp"pr)#u`N6`b3(N!n;>8fCuY*[te(?'js*/@=_Bc2h?cp-3FGQNt<oQ_&!lcC_+3_0nc0#0_8toJuo5hhXj/)bb-V63(/Q*dc-k$kq%onMU<QJ83+4mEdi-3?r#<3g-6[`]%cr[lqsiuLAgj0Zt:l>B\DM53u/O_odZc?l]%f(!f7Jm<94jNfL<D1)%%7JI5>H6O=Ik*5_a#G7aJWn1_>"i+ltOPoN]a8Op)K1$Qh$Qau,1007^(bp(rb:j*!5&Z9($mB*T4r;15\9:CfFE'#chkQ4-Wn#%Q2n>5,r`IR-.cC'ulAE_0.&&d3'\<m(GddJ!lEIl&/<4b#;6S6b./XtL[]I`](2eiB2+\f0EIVo_I?]0rcs8>BRAeU'rU5,W\I^^Fhsib`W6r5>SO6&QdY]OmWHCcfhISG<n?`c9==rKm#)/]UJ3EE;Z3O#RIh^V2.AP!\,u_L(3pCX&1WI%=>nRLaN;8eWX&7@4mUe$GgRF9pjXiX#]h\foC^d2;(Dd[4m)r!L3t\B:"sQE.f*Xa3UL20btt2feT:GnoI-^[R!1V=L_dZ=ISnb/4Iq5Q!^WgJ5Ah_S4'P_WibYEj;3!F0'X(DGO1"PCUbr1"dpPhrT[[CXlouTYae^UHl`5`<IX2)>6[3W,^7T*9G_HW_6Yp'!#kk:7&n>Z2_'S2l:#P<Yo?Fc&^FgN12;\fd]TKK5m-'A`5$<Hn4mWG.LmtlcJfreJB9C,.3#O[#W9`>$Rb(WXDB5r-=_sIh_3'MW,/GHJmhTj@Qa4L8jcXMFGoHZA>B8Z!>L&>8(8(E"CEk?skErhfKiZ]guhIp0R0IEOIEE#%gJ*`Kh+=b'K+q@KP*R?:r`M=EP:eS)lALf_5?l:fO]%DfCBL^N@<#o`~>endstream
 endobj
 xref
 0 11
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000524 00000 n 
-0000000728 00000 n 
-0000000796 00000 n 
-0000001095 00000 n 
-0000001160 00000 n 
-0000004372 00000 n 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000148 00000 n 
+0000000347 00000 n 
+0000011527 00000 n 
+0000011568 00000 n 
+0000011675 00000 n 
+0000011787 00000 n 
+0000011986 00000 n 
+0000013540 00000 n 
 trailer
 <<
-/ID 
-[<8c56d18d8d9c542075a1a9fc0592a3f2><8c56d18d8d9c542075a1a9fc0592a3f2>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 7 0 R
-/Root 6 0 R
 /Size 11
+/Root 1 0 R
+/Info 10 0 R
+/ID [ <33f674f8c9867a67486ebefd5cc4e8e3> <33f674f8c9867a67486ebefd5cc4e8e3> ]
 >>
 startxref
-5913
+13879
 %%EOF
