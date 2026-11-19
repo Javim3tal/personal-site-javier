@@ -53,7 +53,7 @@ window.SITE_CONTENT = {
       icon: "data",
       title: "Data engineering and integration",
       summary: "Enterprise data flows on Azure and Databricks.",
-      items: ["Azure Data Factory, Functions, SQL", "Data Lake, Service Bus, Logic Apps", "Databricks, PostgreSQL", "Data mappings and API specifications"]
+      items: ["Azure Data Factory, Functions, SQL", "Data Lake, Service Bus, Logic Apps", "Databricks, PostgreSQL, Oracle", "Data mappings and API specifications"]
     },
     {
       icon: "ai",
@@ -205,22 +205,22 @@ window.SITE_CONTENT = {
       group: "AI",
       issuer: "Anthropic",
       items: [
+        { name: "Claude Academy: Introduction to Model Context Protocol", date: "Nov 2026" },
+        { name: "Claude Academy: Claude Code in Action", date: "Nov 2026" },
+        { name: "Claude Academy: Introduction to Claude Tag", date: "Oct 2026" },
+        { name: "Claude Academy: Introduction to Claude Cowork", date: "Oct 2026" },
         { name: "Claude Academy: Claude Platform 101", date: "Oct 2026" },
         { name: "Claude Academy: Claude 101", date: "Oct 2026" },
         { name: "Claude Academy: Claude Code 101", date: "Oct 2026" },
         { name: "Model Context Protocol: Advanced Topics", date: "May 2026" },
-        { name: "Introduction to Model Context Protocol", date: "May 2026" },
-        { name: "AI Fluency: Framework & Foundations", date: "May 2026" },
-        { name: "Claude Code in Action", date: "May 2026" },
-        { name: "Introduction to Claude Cowork", date: "Apr 2026" },
-        { name: "Claude Code 101", date: "Apr 2026" },
-        { name: "Claude 101", date: "Mar 2026" }
+        { name: "AI Fluency: Framework & Foundations", date: "May 2026" }
       ]
     },
     {
       group: "Programming",
       issuer: "Coddy",
       items: [
+        { name: "Python Fundamentals", date: "Nov 2026" },
         { name: "Go Object Oriented Programming", date: "Oct 2026" },
         { name: "Go Logic & Flow", date: "Sep 2026" },
         { name: "Go Fundamentals", date: "Sep 2026" }
